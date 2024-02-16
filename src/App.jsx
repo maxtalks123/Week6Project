@@ -4,11 +4,9 @@ import CookieShop from "./Cookies/CookieShop";
 import CookieCounter from "./Cookies/CookieCounter";
 import CookieImage from "./Cookies/CookieImage";
 import CookiesPerSecond from "./CPS/CookiesPerSecond";
+import ResetButton from "./ResetButton/ResetButton";
 
 //Todo:
-//make sure setCPS works
-//button functionality for reset button
-//functionality for clicking cookie to get more cookies
 //shop buy button and alert if not enough. - purchase price in shop from overall cookie number
 //styling
 //local storage
@@ -30,11 +28,11 @@ export default function App() {
     <div>
       <CookieCounter count={count} setCount={setCount} />
       <CookiesPerSecond cps={cps} setCPS={setCPS} />
-      <CookieImage />
-      <CookieShop />
-      {/* <CookieCounter />
-      <Timer count={count} setCount={setCount} />
-      <ResetButton functionToResetCount={setCount} /> */}
+      <CookieImage incrementCookiesFunction={setCount} />
+      <ResetButton functiontoResetCount={setCount} />
+      <CookieShop buyItems={setCount} updateCPS={setCPS} />
     </div>
   );
 }
+//add onClick to each buy button
+//create function to check cookies - cost. If count > cost then
