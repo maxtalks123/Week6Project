@@ -27,6 +27,7 @@ export default function App() {
   return (
     <div>
       <h1> Welcome to Cookie Clicker </h1>
+      <h2>Click the cookie to get more!</h2>
       <div className="functions">
         <CookieCounter count={count} setCount={setCount} />
         <CookiesPerSecond cps={cps} setCPS={setCPS} />
