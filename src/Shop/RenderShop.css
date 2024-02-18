@@ -1,4 +1,27 @@
 li {
   border: 3px solid black;
-  padding: 5px;
+  padding: 3px;
+  margin-right: 20px;
+  display: flex;
+  width: 85vw;
+  margin-left: 0px;
+  align-items: stretch;
+  align-content: center;
+  left: 2px;
+  position: sticky;
+  justify-content: space-between;
+}
+@media (max-width: 400px) {
+  ul {
+    position: sticky;
+    left: 1px;
+    margin-right: 20px;
+  }
+  .CookieShop {
+    position: sticky;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+  }
 }

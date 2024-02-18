@@ -48,31 +48,3 @@ export const ShopItems = [
     Buy: "Buy",
   },
 ];
-//   return (
-//     <div className="CookieShop">
-//       <h1>Buy your upgrades here!</h1>
-//       <ul>
-//         {shopItems.map((item) => (
-//           <li key={item.id}>
-//             <p>Upgrade: {item.Name}</p>
-//             <p>Cost: {item.Cost}</p>
-//             <p>Cookies Per Second: {item.CPS}</p>
-//             <p>Amount bought: {item.Bought}</p>
-//             <button
-//               onClick={() =>
-//                 buyItems((count) =>
-//                   count >= item.Cost
-//                     ? count - item.Cost
-//                     : alert("you can't purchase this item")
-//                 )
-//               }
-//             >
-//               {item.Buy}
-//             </button>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-// //

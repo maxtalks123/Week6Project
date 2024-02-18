@@ -1,14 +1,25 @@
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 400px) {
+  .functions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+  .Shop {
+    position: absolute;
+    top: 28rem;
+    left: 0px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
+h1 {
+  text-align: center;
+  text-decoration: solid;
+  text-decoration: underline;
+}
+.functions {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}

@@ -6,7 +6,6 @@ export default function RenderShop({
   itemName,
   itemCost,
   itemCPS,
-  //   itemBought,
   increaseCPS,
   buyItems,
   count,
@@ -15,7 +14,6 @@ export default function RenderShop({
   const [itemBought, setItemBought] = useState(0);
   return (
     <div className="CookieShop">
-      <h1>Buy your upgrades here!</h1>
       <ul>
         <li>
           <p>Upgrade: {itemName}</p>

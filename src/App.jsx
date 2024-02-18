@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import "./App.css";
+import "./App.css";
 import CookieCounter from "./Cookies/CookieCounter";
 import CookieImage from "./Cookies/CookieImage";
 import CookiesPerSecond from "./CPS/CookiesPerSecond";
@@ -26,11 +26,18 @@ export default function App() {
 
   return (
     <div>
-      <CookieCounter count={count} setCount={setCount} />
-      <CookiesPerSecond cps={cps} setCPS={setCPS} />
-      <CookieImage incrementCookiesFunction={setCount} />
-      <ResetButton functiontoResetCount={setCount} />
+      <h1> Welcome to Cookie Clicker </h1>
+      <div className="functions">
+        <CookieCounter count={count} setCount={setCount} />
+        <CookiesPerSecond cps={cps} setCPS={setCPS} />
+        <CookieImage incrementCookiesFunction={setCount} />
+        <ResetButton
+          functiontoResetCount={setCount}
+          functiontoResetCPS={setCPS}
+        />
+      </div>
       <div className="Shop">
+        <h1>Buy your upgrades here!</h1>
         {ShopItems.map((item) => (
           <RenderShop
             key={item.id}

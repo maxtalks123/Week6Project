@@ -4,4 +4,5 @@ img {
   border-radius: 50%;
   left: 20rem;
   position: sticky;
+  margin: 20px;
 }
