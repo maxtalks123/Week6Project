@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 // import "./App.css";
-import CookieShop from "./Cookies/CookieShop";
 import CookieCounter from "./Cookies/CookieCounter";
 import CookieImage from "./Cookies/CookieImage";
 import CookiesPerSecond from "./CPS/CookiesPerSecond";
 import ResetButton from "./ResetButton/ResetButton";
+import { ShopItems } from "./Shop/CookieUpgrades";
+import RenderShop from "./Shop/RenderShop";
 
 //Todo:
 //shop buy button and alert if not enough. - purchase price in shop from overall cookie number
 //styling
-//local storage
-//navbar
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -24,15 +23,29 @@ export default function App() {
       clearInterval(interval);
     };
   }, [cps]);
+
   return (
     <div>
       <CookieCounter count={count} setCount={setCount} />
       <CookiesPerSecond cps={cps} setCPS={setCPS} />
       <CookieImage incrementCookiesFunction={setCount} />
       <ResetButton functiontoResetCount={setCount} />
-      <CookieShop buyItems={setCount} updateCPS={setCPS} />
+      <div className="Shop">
+        {ShopItems.map((item) => (
+          <RenderShop
+            key={item.id}
+            itemName={item.Name}
+            itemCost={item.Cost}
+            itemCPS={item.CPS}
+            itemBought={item.Bought}
+            itemBuy={item.Buy}
+            increaseCPS={setCPS}
+            buyItems={setCount}
+            count={count}
+            cps={cps}
+          />
+        ))}
+      </div>
     </div>
   );
 }
-//add onClick to each buy button
-//create function to check cookies - cost. If count > cost then
